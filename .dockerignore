@@ -4,4 +4,4 @@ obj/
 .vs/
 Dockerfile
 .dockerignore
-README.md
+README.md.env
