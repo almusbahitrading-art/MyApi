@@ -1,7 +1,10 @@
-bin/
-obj/
+**/bin/
+**/obj/
 .git/
+.github/
 .vs/
+tests/
 Dockerfile
 .dockerignore
-README.md.env
+.env
+README.md

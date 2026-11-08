@@ -1,11 +1,11 @@
 FROM mcr.microsoft.com/dotnet/sdk:9.0 AS build
 WORKDIR /src
 
-COPY MyApi.csproj .
-RUN dotnet restore
+COPY src/MyApi/MyApi.csproj src/MyApi/
+RUN dotnet restore src/MyApi/MyApi.csproj
 
-COPY . .
-RUN dotnet publish -c Release -o /app
+COPY src/MyApi/ src/MyApi/
+RUN dotnet publish src/MyApi/MyApi.csproj -c Release -o /app --no-restore
 
 FROM mcr.microsoft.com/dotnet/aspnet:9.0
 WORKDIR /app

@@ -25,3 +25,5 @@ app.MapGet("/db-check", async (IConfiguration config) =>
 });
 
 app.Run();
+
+public partial class Program { }
